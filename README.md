@@ -29,8 +29,6 @@ To assess your ability to design, develop, test, and document a comprehensive La
 
 Develop a Laravel package that simplifies interaction with the `https://dummyjson.com/quotes` public API. The package should include API interaction, rate limiting, caching, and a user interface built with Vue.js for displaying quotes. The UI's build artifacts should be publishable for customization.
 
-**Time Allotment:** 8 - 12 hours
-
 ## Deliverables
 
 * A Git repository link containing the complete Laravel package code.
@@ -69,19 +67,19 @@ Develop a Laravel package that simplifies interaction with the `https://dummyjso
     * **If the quote with the given ID is found in the cache, retrieve it using binary search (assuming the cached data is sorted by ID) and return it without making an API call.**
     * If the quote is not in the cache, make an API call, store the fetched quote in the cache (ensuring the cache remains sorted by ID for binary search), and then return it.
 
-7. **Vue.js User Interface:**
-    * Build a user interface using Vue.js within your package. This UI should allow users to:
-        * View all quotes (potentially with pagination).
-        * View a random quote.
-        * View a specific quote by ID.
-    * This UI should make API requests to your package's backend to fetch the data.
-
-8. **Package API Routes:**
+7. **Package API Routes:**
     * Define API routes within your package (registered via the service provider, likely under a `/api/quotes` prefix) that your Vue.js application can consume. These routes should:
         * `/api/quotes`: Return all quotes.
         * `/api/quotes/random`: Return a random quote.
         * `/api/quotes/{id}`: Return a specific quote by ID.
     * Create controller(s) within your package to handle these API routes and interact with your API client service.
+
+8. **Vue.js User Interface:**
+    * Build a user interface using Vue.js within your package. This UI should allow users to:
+        * View all quotes (potentially with pagination).
+        * View a random quote.
+        * View a specific quote by ID.
+    * This UI should make API requests to your package's backend to fetch the data.
 
 9. **Serving the Vue.js Application:**
     * Define a route in your package (e.g., `/quotes-ui`) that serves the main entry point of your Vue.js application. You will need to configure Vite within your package to build the Vue.js application into static assets.
