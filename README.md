@@ -59,9 +59,9 @@ Develop a Laravel package that simplifies interaction with the `https://dummyjso
         * The duration of the time window in seconds (e.g., 60 for one minute).
 
 4. **API Interaction Methods:**
-    * `index()`: Fetches all quotes from the `/quotes` endpoint.
-    * `random()`: Fetches a single random quote from the `/quotes/random` endpoint.
-    * `show(int $id)`: Fetches a specific quote by its ID from the `/quotes/{id}` endpoint. This method should first check the local cache using binary search.
+    * `getAllQuotes()`: Fetches all quotes from the `/quotes` endpoint.
+    * `GetRandomQuote()`: Fetches a single random quote from the `/quotes/random` endpoint.
+    * `getQuote(int $id)`: Fetches a specific quote by its ID from the `/quotes/{id}` endpoint. This method should first check the local cache using binary search.
 
 5. **Rate Limiting Implementation:**
     * Implement a mechanism to track the number of requests made to the API within the configured time window.
