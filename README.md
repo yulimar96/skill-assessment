@@ -29,9 +29,15 @@ To assess your ability to design, develop, test, and document a comprehensive La
 
 Develop a Laravel package that simplifies interaction with the `https://dummyjson.com/quotes` public API. The package should include API interaction, rate limiting, caching, and a user interface built with Vue.js for displaying quotes. The UI's build artifacts should be publishable for customization.
 
+> [!IMPORTANT]
+> Repository should follow the common structure for Laravel packages, it should not be an app.
+
+> [!IMPORTANT]
+> All requirements must be completed in order for the assessment to be evaluated. This is not optional.
+
 ## Deliverables
 
-* A Git repository link containing the complete Laravel package code.
+* A public Git repository link containing the complete Laravel package code.
 * A `README.md` file in the package root directory with clear instructions for installation, configuration, basic usage, rate limiting, caching, and accessing/publishing the Vue.js UI.
 
 ## Requirements
@@ -53,9 +59,9 @@ Develop a Laravel package that simplifies interaction with the `https://dummyjso
         * The duration of the time window in seconds (e.g., 60 for one minute).
 
 4. **API Interaction Methods:**
-    * `getAllQuotes()`: Fetches all quotes from the `/quotes` endpoint.
-    * `getRandomQuote()`: Fetches a single random quote from the `/quotes/random` endpoint.
-    * `getQuote(int $id)`: Fetches a specific quote by its ID from the `/quotes/{id}` endpoint. This method should first check the local cache using binary search.
+    * `index()`: Fetches all quotes from the `/quotes` endpoint.
+    * `random()`: Fetches a single random quote from the `/quotes/random` endpoint.
+    * `show(int $id)`: Fetches a specific quote by its ID from the `/quotes/{id}` endpoint. This method should first check the local cache using binary search.
 
 5. **Rate Limiting Implementation:**
     * Implement a mechanism to track the number of requests made to the API within the configured time window.
@@ -100,10 +106,9 @@ Develop a Laravel package that simplifies interaction with the `https://dummyjso
 
 ## Submission Instructions
 
-1. Create a new private repository on a platform like GitHub, GitLab, or Bitbucket.
+1. Create a new public repository on a platform like GitHub, GitLab, or Bitbucket.
 2. Develop the Laravel package according to the requirements outlined above.
 3. Ensure all tests pass and the documentation is complete.
-4. Grant access to your repository to the designated evaluator(s).
 5. Submit the repository link to the designated evaluator(s).
 
 Good luck!
