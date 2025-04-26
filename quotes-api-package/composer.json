@@ -1,0 +1,30 @@
+{
+  "name": "ydominguez/quotes-api-package",
+  "description": "Laravel package for interacting with quotes API with rate limiting, caching and Vue.js UI",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Ydominguez\\QuotesApi\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "yulimar96",
+      "email": "yulimardominguez96@gmail.com"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Ydominguez\\QuotesApi\\Providers\\QuotesServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^8.1|^8.2|^8.3",
+    "illuminate/support": "^10.0|^11.0|^12.0",
+    "laravel/framework": "^10.0|^11.0|^12.0"
+  }
+}
